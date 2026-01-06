@@ -214,6 +214,21 @@
             font-size: clamp(1rem, 2.5vw, 1.25rem);
             margin-bottom: 2rem;
             opacity: 0.95;
+            min-height: 1.5em; /* Prevent layout shift */
+        }
+
+        /* Blinking cursor for typewriter effect */
+        #animated-subtitle::after {
+            content: '|';
+            animation: blinkCursor 1s infinite;
+            color: #00ff96;
+            margin-left: 0.25rem;
+            font-weight: 300;
+        }
+
+        @keyframes blinkCursor {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
         }
 
         .cta-button {
@@ -378,7 +393,7 @@
 
         .lang-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: 1fr;
             gap: 1rem;
             max-width: 1000px;
             margin: 0 auto;
@@ -769,6 +784,11 @@
                 display: flex !important;
             }
 
+            /* Show all 4 languages in one row on larger screens */
+            .lang-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
             .menu-toggle {
                 display: none;
             }
@@ -870,7 +890,7 @@
                      class="hero-photo">
                 <div class="hero-text">
                     <h1 id="hero-title">Mustansar Cheema</h1>
-                    <p>IT Manager & Digital Transformation Leader | Dubai, UAE</p>
+                    <p id="animated-subtitle">IT Manager & Digital Transformation Leader | Dubai, UAE</p>
                     <a href="#contact" class="cta-button">Get In Touch</a>
                 </div>
             </div>
@@ -911,6 +931,13 @@
                                 </div>
                             </div>
                             <div class="highlight-item">
+                                <div class="highlight-icon" aria-hidden="true">💻</div>
+                                <div>
+                                    <div class="highlight-title">Applications Development</div>
+                                    <div class="highlight-desc">Design and develop enterprise applications, mobile apps, and custom solutions using modern technologies.</div>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
                                 <div class="highlight-icon" aria-hidden="true">⚙️</div>
                                 <div>
                                     <div class="highlight-title">Enterprise Implementations</div>
@@ -922,13 +949,6 @@
                                 <div>
                                     <div class="highlight-title">Network & Cloud</div>
                                     <div class="highlight-desc">Cisco Meraki across 25 branches and AWS adoption for scalable, secure operations.</div>
-                                </div>
-                            </div>
-                            <div class="highlight-item">
-                                <div class="highlight-icon" aria-hidden="true">🔒</div>
-                                <div>
-                                    <div class="highlight-title">Security & Compliance</div>
-                                    <div class="highlight-desc">Risk management and data protection aligned with ISO practices.</div>
                                 </div>
                             </div>
                         </div>
@@ -1305,6 +1325,62 @@
         document.addEventListener('mousedown', () => {
             document.body.classList.remove('keyboard-nav');
         });
+
+        // Typewriter animation for hero subtitle - cycles through multiple titles
+        (function() {
+            const subtitleElement = document.getElementById('animated-subtitle');
+            if (!subtitleElement) return;
+
+            // Array of titles to cycle through
+            const titles = [
+                'IT Manager',
+                'IT Projects Manager',
+                'Applications Development Manager',
+                'IT Infrastructure Manager',
+                'IT Operations Manager',
+                'Digital Transformation Leader',
+                'IT Consultant'
+            ];
+
+            let currentTitleIndex = 0;
+            let currentCharIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 100; // milliseconds per character
+            let deletingSpeed = 50; // faster when deleting
+            let pauseBetweenTitles = 2000; // pause before starting next title
+
+            function typeWriter() {
+                const currentTitle = titles[currentTitleIndex];
+                
+                if (isDeleting) {
+                    // Deleting characters
+                    subtitleElement.textContent = currentTitle.substring(0, currentCharIndex - 1);
+                    currentCharIndex--;
+                    typingSpeed = deletingSpeed;
+                } else {
+                    // Typing characters
+                    subtitleElement.textContent = currentTitle.substring(0, currentCharIndex + 1);
+                    currentCharIndex++;
+                    typingSpeed = 50;
+                }
+
+                if (!isDeleting && currentCharIndex === currentTitle.length) {
+                    // Finished typing, wait then start deleting
+                    typingSpeed = pauseBetweenTitles;
+                    isDeleting = true;
+                } else if (isDeleting && currentCharIndex === 0) {
+                    // Finished deleting, move to next title
+                    isDeleting = false;
+                    currentTitleIndex = (currentTitleIndex + 1) % titles.length;
+                    typingSpeed = 500; // pause before typing next title
+                }
+
+                setTimeout(typeWriter, typingSpeed);
+            }
+
+            // Start the animation after a short delay
+            setTimeout(typeWriter, 1000);
+        })();
     </script>
 </body>
 </html>
