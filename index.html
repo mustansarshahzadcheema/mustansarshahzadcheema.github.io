@@ -373,6 +373,9 @@
             padding: var(--space-md);
             background: var(--color-bg-card);
             transition: background var(--transition);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-xs);
         }
         .experience-details summary::-webkit-details-marker { display: none; }
         .experience-details summary::marker { content: none; }
@@ -380,7 +383,7 @@
             content: '+ ';
             color: var(--color-accent);
             font-weight: 700;
-            margin-right: var(--space-xs);
+            flex-shrink: 0;
         }
         .experience-details[open] summary::before {
             content: '− ';
@@ -445,6 +448,9 @@
             padding: var(--space-md);
             background: var(--color-bg-card);
             transition: background var(--transition);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-xs);
         }
         .project-details summary::-webkit-details-marker { display: none; }
         .project-details summary::marker { content: none; }
@@ -452,7 +458,7 @@
             content: '+ ';
             color: var(--color-accent);
             font-weight: 700;
-            margin-right: var(--space-xs);
+            flex-shrink: 0;
         }
         .project-details[open] summary::before {
             content: '− ';
