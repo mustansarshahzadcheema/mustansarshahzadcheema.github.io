@@ -3,1250 +3,1288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mustansar Cheema - IT Manager and Digital Transformation Leader Portfolio">
-    <title>Mustansar Cheema - Portfolio</title>
+    <meta name="description" content="Mustansar Cheema – IT Manager and Digital Transformation Leader. 20+ years delivering enterprise IT programs, digital transformation, and large-scale platforms.">
+    <meta name="keywords" content="IT Manager, Digital Transformation, Enterprise IT, Program Management, PMP, ITIL, Dubai">
+    <title>Mustansar Cheema | IT Manager & Digital Transformation Leader</title>
     <link rel="icon" href="images/mc_favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         :root {
-            --primary-color: #2c5aa0;
-            --secondary-color: #1a3d66;
-            --accent-color: #d4a574;
-            --gold-accent: #c9a961;
-            --text-color: #1f2937;
-            --text-light: #6b7280;
-            --bg-color: #ffffff;
-            --bg-light: #f8f9fa;
-            --border-color: #e5e7eb;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --color-text: #1e293b;
+            --color-text-muted: #64748b;
+            --color-accent: #334155;
+            --color-accent-soft: #475569;
+            --color-bg: #fafbfc;
+            --color-bg-alt: #f1f5f9;
+            --color-bg-card: #ffffff;
+            --color-border: #e2e8f0;
+            --color-border-soft: #f1f5f9;
+            --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+            --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.06);
+            --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.05);
+            --radius: 6px;
+            --transition: 0.2s ease;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            font-family: var(--font-sans);
+            font-size: 1rem;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            overflow-x: hidden;
+            color: var(--color-text);
+            background: var(--color-bg);
         }
 
-        /* Prevent horizontal overflow on small screens */
-        html { overflow-x: hidden; }
-        img, svg, canvas, video { max-width: 100%; height: auto; display: block; }
-
-        /* Accessibility - Skip to main content */
         .skip-link {
             position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--primary-color);
-            color: white;
-            padding: 8px;
+            top: -3rem;
+            left: var(--space-sm);
+            background: var(--color-accent);
+            color: #fff;
+            padding: var(--space-xs) var(--space-sm);
             text-decoration: none;
             z-index: 100;
+            font-size: 0.875rem;
         }
+        .skip-link:focus { top: var(--space-sm); }
 
-        .skip-link:focus {
-            top: 0;
-        }
-
-        /* Header and Navigation */
-        header {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        .site-header {
             position: sticky;
             top: 0;
             z-index: 50;
-            border-bottom: 2px solid rgba(212, 165, 116, 0.3);
+            background: rgba(250, 251, 252, 0.92);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--color-border-soft);
+            box-shadow: var(--shadow-sm);
+            padding: var(--space-sm) 0;
+            transition: box-shadow var(--transition);
         }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0.5rem 2rem;
+        .site-header .wrap {
+            width: 100%;
+            margin: 0;
+            padding: 0 var(--space-md);
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
         }
-
-        .logo {
-            display: flex;
-            align-items: center;
+        .nav-desktop { display: flex; gap: var(--space-lg); flex-wrap: wrap; }
+        .nav-desktop a {
+            color: var(--color-text-muted);
             text-decoration: none;
-            gap: 0.5rem;
-        }
-
-        .logo img {
-            height: 70px;
-            width: auto;
-            transition: transform 0.3s ease;
-            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
-        }
-
-        .logo:hover img {
-            transform: scale(1.05);
-            filter: drop-shadow(0 4px 12px rgba(212, 165, 116, 0.4));
-        }
-
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: bold;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: rgba(255, 255, 255, 0.9);
-            text-decoration: none;
-            transition: color 0.3s ease, transform 0.3s ease;
-            position: relative;
+            font-size: 0.9375rem;
             font-weight: 500;
+            position: relative;
+            transition: color var(--transition);
         }
-
-        .nav-links a::after {
+        .nav-desktop a:hover { color: var(--color-accent); text-decoration: none; }
+        .nav-desktop a::after {
             content: '';
             position: absolute;
-            bottom: -4px;
             left: 0;
+            bottom: -2px;
             width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #d4a574, #c9a961);
-            transition: width 0.3s ease;
-            display: block;
+            height: 1px;
+            background: var(--color-accent);
+            transition: width var(--transition);
         }
-
-        .nav-links a:hover::after,
-        .nav-links a:focus::after {
-            width: 100%;
-        }
-
-        .nav-links a:hover,
-        .nav-links a:focus {
-            color: #d4a574;
-        }
-
-        .menu-toggle {
+        .nav-desktop a:hover::after { width: 100%; }
+        .nav-toggle {
             display: none;
             background: none;
             border: none;
-            font-size: 1.5rem;
+            padding: var(--space-xs);
             cursor: pointer;
-            color: rgba(255, 255, 255, 0.9);
-            transition: color 0.3s ease;
+            font-size: 1.25rem;
+            color: var(--color-text);
         }
+        .nav-mobile { display: none; }
 
-        .menu-toggle:hover,
-        .menu-toggle:focus {
-            color: #d4a574;
+        main { padding-bottom: var(--space-2xl); }
+        .wrap {
+            width: 100%;
+            margin: 0;
+            padding: 0 var(--space-md);
+            box-sizing: border-box;
         }
+        section {
+            padding: var(--space-2xl) 0;
+            border-bottom: 1px solid var(--color-border-soft);
+            transition: background var(--transition);
+        }
+        section:nth-child(even) { background: rgba(255, 255, 255, 0.6); }
+        section:last-of-type { border-bottom: none; }
+        .section-id { scroll-margin-top: 4rem; }
 
-        /* Hero Section */
+        h1 {
+            font-size: clamp(1.75rem, 4vw, 2.25rem);
+            font-weight: 700;
+            color: var(--color-text);
+            margin: 0 0 var(--space-xs);
+            letter-spacing: -0.02em;
+        }
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-accent);
+            margin: 0 0 var(--space-md);
+            letter-spacing: -0.01em;
+            padding-left: var(--space-sm);
+            border-left: 3px solid var(--color-accent);
+        }
+        h3 {
+            font-size: 1.0625rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin: var(--space-md) 0 var(--space-xs);
+        }
+        h3:first-child { margin-top: 0; }
+        p { margin: 0 0 var(--space-sm); color: var(--color-text); }
+        p:last-child { margin-bottom: 0; }
+        ul { margin: 0 0 var(--space-sm); padding-left: 1.25rem; }
+        li { margin-bottom: 0.25rem; }
+        a { color: var(--color-accent); text-decoration: none; transition: color var(--transition); }
+        a:hover { text-decoration: underline; }
+
+        /* Hero */
         .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #1a3d66 0%, #2c5aa0 50%, #1a3d66 100%);
-            color: white;
-            padding: 4rem 2rem;
+            padding: var(--space-2xl) 0;
+            background: linear-gradient(160deg, var(--color-bg-alt) 0%, #e2e8f0 100%);
             position: relative;
-            overflow: hidden;
         }
-
         .hero::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(212, 165, 116, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(201, 169, 97, 0.1) 0%, transparent 50%);
-            z-index: 0;
+            background: radial-gradient(ellipse 80% 50% at 20% 50%, rgba(241, 245, 249, 0.9) 0%, transparent 60%);
+            pointer-events: none;
         }
-
-        .hero > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            align-items: center;
-            text-align: center;
-        }
-
-        .hero-photo {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid white;
-            box-shadow: var(--shadow-lg);
-            margin: 0 auto;
-        }
-
-        .hero-text h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            margin-bottom: 1rem;
-        }
-
-        .hero-text p {
-            font-size: clamp(1rem, 2.5vw, 1.25rem);
-            margin-bottom: 2rem;
-            opacity: 0.95;
-            min-height: 1.5em; /* Prevent layout shift */
-        }
-
-        /* Blinking cursor for typewriter effect */
-        #animated-subtitle::after {
-            content: '|';
-            animation: blinkCursor 1s infinite;
-            color: #00ff96;
-            margin-left: 0.25rem;
-            font-weight: 300;
-        }
-
-        @keyframes blinkCursor {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 0.875rem 2rem;
-            background: linear-gradient(135deg, #d4a574 0%, #c9a961 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            box-shadow: 0 4px 15px rgba(212, 165, 116, 0.4);
-        }
-
-        .cta-button:hover,
-        .cta-button:focus {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(212, 165, 116, 0.6);
-        }
-
-        /* Section Styles */
-        section {
-            padding: 4rem 2rem;
-        }
-
-        .section-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: clamp(1.75rem, 4vw, 2.5rem);
-            margin-bottom: 3rem;
-            text-align: center;
-            background: linear-gradient(135deg, #2c5aa0 0%, #1a3d66 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 700;
-        }
-
-        /* About Section */
-        .about {
-            background: linear-gradient(180deg, var(--bg-light) 0%, #eef3f8 100%);
-        }
-
-        .about-wrapper {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        @media (min-width: 900px) {
-            .about-wrapper {
-                grid-template-columns: 1.2fr 0.8fr;
-                align-items: start;
-            }
-        }
-
-        .about-card {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 12px 30px rgba(26, 61, 102, 0.08);
-            border: 1px solid #eef2f7;
-        }
-
-        .about-heading {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 1rem;
-        }
-
-        .about-heading .emoji {
-            font-size: 1.6rem;
-        }
-
-        .about-text {
-            font-size: clamp(1rem, 2vw, 1.125rem);
-            color: var(--text-light);
-            line-height: 1.9;
-        }
-
-        .about-highlights {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
-        }
-
-        .highlight-item {
-            display: grid;
-            grid-template-columns: 40px 1fr;
-            align-items: start;
-            gap: 0.75rem;
-            padding: 1rem 1rem;
-            background: #ffffff;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary-color);
-            box-shadow: 0 8px 20px rgba(26, 61, 102, 0.06);
-        }
-
-        .highlight-icon {
-            width: 40px;
-            height: 40px;
+        .hero .wrap { position: relative; z-index: 1; }
+        .hero .wrap {
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: var(--space-2xl);
+        }
+        .hero-photo {
+            width: 200px;
+            height: 200px;
+            min-width: 200px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #2c5aa0, #1a3d66);
+            object-fit: cover;
+            display: block;
+            box-shadow: var(--shadow-soft);
+            border: 3px solid rgba(255, 255, 255, 0.8);
+            transition: box-shadow var(--transition), transform var(--transition);
+        }
+        .hero-photo:hover {
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+        }
+        .hero-content {
+            text-align: left;
+        }
+        .hero-title-wrap {
+            font-size: 1.0625rem;
+            color: var(--color-text-muted);
+            margin: 0 0 var(--space-md);
+            min-height: 1.5em;
+        }
+        .typewriter-cursor {
+            display: inline-block;
+            animation: blink 1s step-end infinite;
+            margin-left: 2px;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        @media (max-width: 640px) {
+            .hero .wrap {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-content { text-align: center; }
+            .hero-title-wrap { margin-left: auto; margin-right: auto; }
+        }
+        .hero .cta {
+            display: inline-block;
+            margin-top: var(--space-sm);
+            padding: var(--space-sm) var(--space-lg);
+            background: var(--color-accent);
             color: #fff;
-            font-size: 1.1rem;
-            box-shadow: 0 6px 16px rgba(44, 90, 160, 0.35);
+            font-weight: 600;
+            font-size: 0.9375rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            box-shadow: var(--shadow-sm);
+            transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+        }
+        .hero .cta:hover {
+            background: var(--color-accent-soft);
+            box-shadow: var(--shadow-md);
+            text-decoration: none;
         }
 
-        .highlight-title {
+        /* About + Core Competencies (two columns) */
+        .about-competencies-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            align-items: start;
+        }
+        .about-competencies .about-col h2,
+        .about-competencies .competencies-col h2 {
+            margin-top: 0;
+        }
+        .about-competencies .about-col p {
+            text-align: justify;
+        }
+        @media (max-width: 768px) {
+            .about-competencies-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Core competencies */
+        .competencies-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: var(--space-sm);
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .competencies-list li {
+            margin: 0;
+            padding: var(--space-sm);
+            background: var(--color-bg-card);
+            border-radius: var(--radius);
+            font-size: 0.9375rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-border-soft);
+            transition: box-shadow var(--transition), border-color var(--transition);
+        }
+        .competencies-list li:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-border);
+        }
+
+        /* Skills (accordion – only subheadings visible by default) */
+        .skills-group {
+            margin-bottom: var(--space-sm);
+            border: 1px solid var(--color-border-soft);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: border-color var(--transition), box-shadow var(--transition);
+        }
+        .skills-group:hover {
+            border-color: var(--color-border);
+            box-shadow: var(--shadow-md);
+        }
+        .skills-group[open] {
+            border-color: var(--color-border);
+        }
+        .skills-group summary {
+            list-style: none;
+            cursor: pointer;
+            padding: var(--space-sm) var(--space-md);
+            font-size: 1.0625rem;
+            font-weight: 600;
+            color: var(--color-text);
+            background: var(--color-bg-card);
+            transition: background var(--transition);
+        }
+        .skills-group summary::-webkit-details-marker { display: none; }
+        .skills-group summary::marker { content: none; }
+        .skills-group summary::before {
+            content: '+ ';
+            color: var(--color-accent);
             font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 0.25rem;
-            font-size: 1rem;
+            margin-right: var(--space-xs);
         }
-
-        .highlight-desc {
-            color: var(--text-light);
-            font-size: 0.98rem;
-            line-height: 1.7;
+        .skills-group[open] summary::before {
+            content: '− ';
         }
-
-        .about-chips {
+        .skills-group summary:hover {
+            background: var(--color-bg-alt);
+        }
+        .skills-group .skills-tags {
+            padding: var(--space-sm) var(--space-md) var(--space-md);
+            margin: 0;
+            border-top: 1px solid var(--color-border-soft);
+        }
+        .skills-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1.25rem;
-        }
-
-        .chip {
-            padding: 0.4rem 0.8rem;
-            border-radius: 999px;
-            background: #f1f5f9;
-            border: 1px solid #e2e8f0;
-            color: #334155;
-            font-weight: 600;
-            font-size: 0.85rem;
-        }
-
-        .chip.primary {
-            background: linear-gradient(135deg, #2c5aa0, #1a3d66);
-            color: #fff;
-            border: none;
-            box-shadow: 0 6px 18px rgba(44, 90, 160, 0.25);
-        }
-
-        /* Languages Section */
-        .languages {
-            background: linear-gradient(180deg, #ffffff 0%, #f5f7fb 100%);
-        }
-
-        .lang-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .lang-card {
-            background: #ffffff;
-            border-radius: 14px;
-            padding: 1rem 1.25rem;
-            box-shadow: 0 10px 26px rgba(26, 61, 102, 0.08);
-            border: 1px solid #eef2f7;
-        }
-
-        .lang-header {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .lang-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #2c5aa0, #1a3d66);
-            color: #fff;
-            box-shadow: 0 6px 16px rgba(44, 90, 160, 0.35);
-            font-size: 1rem;
-        }
-
-        .lang-name {
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-
-        .lang-bar {
-            height: 8px;
-            width: 100%;
-            background: #e5e7eb;
-            border-radius: 999px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .lang-bar > span {
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: var(--level, 0%);
-            background: linear-gradient(90deg, #2c5aa0, #1a3d66);
-            border-radius: 999px;
-            box-shadow: 0 2px 8px rgba(44, 90, 160, 0.35);
-        }
-
-        .lang-meta {
-            display: flex;
-            justify-content: space-between;
-            color: var(--text-light);
-            font-size: 0.85rem;
-            margin-top: 0.5rem;
-        }
-
-        /* Education Section */
-        .education {
-            background: linear-gradient(180deg, #ffffff 0%, #f5f7fb 100%);
-            position: relative;
-        }
-
-        .edu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .edu-card {
-            display: grid;
-            grid-template-columns: 64px 1fr;
-            gap: 1rem;
-            align-items: center;
-            padding: 1.25rem 1.25rem;
-            background: #ffffff;
-            border-radius: 14px;
-            box-shadow: 0 10px 30px rgba(26, 61, 102, 0.08);
-            border-left: 5px solid var(--primary-color);
-        }
-
-        .edu-icon {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.75rem;
-            color: #fff;
-            background: linear-gradient(135deg, #2c5aa0 0%, #1a3d66 100%);
-            box-shadow: 0 6px 18px rgba(44, 90, 160, 0.35);
-        }
-
-        .edu-body h3 {
-            margin: 0 0 0.25rem 0;
-            font-size: 1.125rem;
-            color: var(--primary-color);
-        }
-
-        .edu-body p {
+            gap: var(--space-xs);
             margin: 0;
-            color: var(--text-light);
+            padding-left: 0;
+            list-style: none;
+        }
+        .skills-tags li {
+            margin: 0;
+            padding: 0.25rem 0.5rem;
+            background: var(--color-bg-card);
+            border-radius: var(--radius);
+            font-size: 0.875rem;
+            color: var(--color-text);
+            border: 1px solid var(--color-border-soft);
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow var(--transition), border-color var(--transition);
+        }
+        .skills-tags li:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-border);
         }
 
-        .edu-meta {
-            margin-top: 0.35rem;
-            font-size: 0.9rem;
-            color: var(--text-light);
+        /* Experience (expandable by clicking) */
+        .experience-item {
+            margin-bottom: var(--space-sm);
         }
-
-        @media (max-width: 480px) {
-            .edu-card {
-                grid-template-columns: 48px 1fr;
-                padding: 1rem;
-            }
-
-            .edu-icon {
-                width: 48px;
-                height: 48px;
-                font-size: 1.25rem;
-            }
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .skill-badge {
-            background: linear-gradient(135deg, #2c5aa0 0%, #1a3d66 100%);
-            color: white;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            text-align: center;
-            font-weight: 600;
-            box-shadow: 0 4px 10px rgba(44, 90, 160, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
+        .experience-item:last-child { margin-bottom: 0; }
+        .experience-details {
+            border: 1px solid var(--color-border-soft);
+            border-radius: var(--radius);
             overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: border-color var(--transition), box-shadow var(--transition);
         }
-
-        .skill-badge::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s ease;
+        .experience-details:hover {
+            border-color: var(--color-border);
+            box-shadow: var(--shadow-md);
         }
-
-        .skill-badge:hover::before {
-            left: 100%;
+        .experience-details[open] {
+            border-color: var(--color-border);
         }
-
-        .skill-badge:hover,
-        .skill-badge:focus {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(44, 90, 160, 0.5);
-        }
-
-        /* Projects Section */
-        .projects {
-            background-color: var(--bg-light);
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            background-color: var(--bg-color);
-            border-radius: 0.5rem;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-title {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
-        }
-
-        .project-description {
-            color: var(--text-light);
-            margin-bottom: 1rem;
-        }
-
-        .project-link {
-            display: inline-block;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .project-link:hover,
-        .project-link:focus {
-            text-decoration: underline;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: linear-gradient(180deg, #ffffff 0%, #f5f7fb 100%);
-        }
-
-        .contact-wrapper {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        @media (min-width: 900px) {
-            .contact-wrapper {
-                grid-template-columns: 0.9fr 1.1fr;
-                align-items: start;
-            }
-        }
-
-        .contact-card,
-        .contact-form-card {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 12px 30px rgba(26, 61, 102, 0.08);
-            border: 1px solid #eef2f7;
-        }
-
-        .contact-card h3,
-        .contact-form-card h3 {
-            margin: 0 0 0.75rem 0;
-            color: var(--primary-color);
-            font-size: 1.25rem;
-        }
-
-        .contact-subtext {
-            color: var(--text-light);
-            margin-bottom: 1.25rem;
-        }
-
-        .contact-info-list {
-            display: grid;
-            gap: 0.75rem;
-        }
-
-        .info-item {
-            display: grid;
-            grid-template-columns: 44px 1fr;
-            gap: 0.75rem;
-            align-items: center;
-            padding: 0.75rem 0.75rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary-color);
-            background: #ffffff;
-            box-shadow: 0 8px 20px rgba(26, 61, 102, 0.06);
-        }
-
-        .info-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #2c5aa0, #1a3d66);
-            color: #fff;
-            font-size: 1.1rem;
-            box-shadow: 0 6px 16px rgba(44, 90, 160, 0.35);
-        }
-
-        .info-text a { color: var(--primary-color); text-decoration: none; font-weight: 600; }
-        .info-text a:hover { text-decoration: underline; }
-
-        .contact-form { max-width: 100%; margin: 0; }
-
-        .form-group { margin-bottom: 1rem; }
-
-        label {
-            display: block;
-            margin-bottom: 0.45rem;
-            font-weight: 600;
-            color: var(--text-color);
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 0.9rem 1rem;
-            border: 2px solid var(--border-color);
-            border-radius: 0.6rem;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
-            background: #ffffff;
-        }
-
-        input:focus,
-        textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 4px rgba(44, 90, 160, 0.12);
-        }
-
-        textarea { resize: vertical; min-height: 150px; }
-
-        .submit-button {
-            width: 100%;
-            padding: 0.9rem;
-            background: linear-gradient(135deg, #2c5aa0 0%, #1a3d66 100%);
-            color: white;
-            border: none;
-            border-radius: 0.6rem;
-            font-size: 1rem;
-            font-weight: 600;
+        .experience-details summary {
+            list-style: none;
             cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            box-shadow: 0 6px 18px rgba(44, 90, 160, 0.25);
+            padding: var(--space-md);
+            background: var(--color-bg-card);
+            transition: background var(--transition);
+        }
+        .experience-details summary::-webkit-details-marker { display: none; }
+        .experience-details summary::marker { content: none; }
+        .experience-details summary::before {
+            content: '+ ';
+            color: var(--color-accent);
+            font-weight: 700;
+            margin-right: var(--space-xs);
+        }
+        .experience-details[open] summary::before {
+            content: '− ';
+        }
+        .experience-details summary:hover {
+            background: var(--color-bg-alt);
+        }
+        .experience-summary-inner {
+            display: block;
+        }
+        .experience-summary-role {
+            display: block;
+            font-size: 1.0625rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: var(--space-xs);
+        }
+        .experience-summary-meta {
+            display: block;
+            font-size: 0.9375rem;
+            color: var(--color-text-muted);
+            margin-bottom: 0.25rem;
+        }
+        .experience-summary-meta:last-child { margin-bottom: 0; }
+        .experience-summary-meta .duration { font-weight: 500; color: var(--color-text); }
+        .experience-details .experience-list {
+            padding: var(--space-sm) var(--space-md) var(--space-md);
+            margin: 0;
+            border-top: 1px solid var(--color-border-soft);
+        }
+        .experience-list {
+            padding-left: 1.25rem;
+            margin: 0 0 var(--space-sm);
+        }
+        .experience-list li {
+            margin-bottom: var(--space-sm);
+            text-align: justify;
         }
 
-        .submit-button:hover,
-        .submit-button:focus {
-            transform: translateY(-1px);
-            box-shadow: 0 10px 28px rgba(44, 90, 160, 0.4);
+        /* Projects (expandable by clicking title + years) */
+        .project {
+            margin-bottom: var(--space-sm);
+        }
+        .project:last-child { margin-bottom: 0; }
+        .project-details {
+            border: 1px solid var(--color-border-soft);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: border-color var(--transition), box-shadow var(--transition);
+        }
+        .project-details:hover {
+            border-color: var(--color-border);
+            box-shadow: var(--shadow-md);
+        }
+        .project-details[open] {
+            border-color: var(--color-border);
+        }
+        .project-details summary {
+            list-style: none;
+            cursor: pointer;
+            padding: var(--space-md);
+            background: var(--color-bg-card);
+            transition: background var(--transition);
+        }
+        .project-details summary::-webkit-details-marker { display: none; }
+        .project-details summary::marker { content: none; }
+        .project-details summary::before {
+            content: '+ ';
+            color: var(--color-accent);
+            font-weight: 700;
+            margin-right: var(--space-xs);
+        }
+        .project-details[open] summary::before {
+            content: '− ';
+        }
+        .project-details summary:hover {
+            background: var(--color-bg-alt);
+        }
+        .project-summary-inner { display: block; }
+        .project-summary-title {
+            display: block;
+            font-size: 1.0625rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: var(--space-xs);
+        }
+        .project-summary-dates {
+            display: block;
+            font-size: 0.9375rem;
+            color: var(--color-text-muted);
+        }
+        .project-details .project-content {
+            padding: var(--space-sm) var(--space-md) var(--space-md);
+            border-top: 1px solid var(--color-border-soft);
+            text-align: justify;
+        }
+        .project-details .project-content p { margin: 0; }
+
+        /* Key achievements (same box style as Core Competencies) */
+        .achievements-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--space-sm);
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .achievements-list li {
+            margin: 0;
+            padding: var(--space-sm);
+            background: var(--color-bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-border-soft);
+            font-size: 0.9375rem;
+            transition: box-shadow var(--transition), border-color var(--transition);
+        }
+        .achievements-list li:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-border);
+        }
+        .achievement-heading {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-accent);
+            margin: 0 0 var(--space-xs);
+            display: block;
+        }
+        .achievement-text {
+            margin: 0;
+            font-size: 0.9375rem;
+            color: var(--color-text);
+            line-height: 1.5;
         }
 
-        /* Footer */
+        /* Education, Certs, Languages (same card style as Core Competencies) */
+        .credentials-list {
+            display: grid;
+            width: 100%;
+            gap: var(--space-sm);
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        #education .credentials-list {
+            grid-template-columns: 1fr 1fr;
+        }
+        #certifications .credentials-list {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        #languages .credentials-list {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        @media (max-width: 768px) {
+            #education .credentials-list,
+            #certifications .credentials-list,
+            #languages .credentials-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        .credential {
+            margin: 0;
+            padding: var(--space-sm);
+            background: var(--color-bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-border-soft);
+            font-size: 0.9375rem;
+            transition: box-shadow var(--transition), border-color var(--transition);
+        }
+        .credential:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-border);
+        }
+        .credential-title { font-weight: 600; margin-bottom: 0.25rem; }
+        .credential-meta { font-size: 0.9375rem; color: var(--color-text-muted); }
+        /* Languages: progress bar (no % text) */
+        .language-progress-bar {
+            height: 8px;
+            background: var(--color-border-soft);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: var(--space-xs);
+        }
+        .language-progress-fill {
+            height: 100%;
+            background: var(--color-accent);
+            border-radius: 4px;
+            transition: width 0.4s ease;
+        }
+
+        /* Contact (two boxes, equal height) */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            align-items: stretch;
+        }
+        .contact-box {
+            background: var(--color-bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-border-soft);
+            padding: var(--space-lg);
+            transition: box-shadow var(--transition), border-color var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-box:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-border);
+        }
+        .contact-box h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-accent);
+            margin: 0 0 var(--space-sm);
+        }
+        .contact-box-intro {
+            font-size: 0.9375rem;
+            color: var(--color-text-muted);
+            margin: 0 0 var(--space-md);
+            line-height: 1.5;
+        }
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .contact-list li {
+            margin-bottom: var(--space-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        .contact-list li:last-child { margin-bottom: 0; }
+        .contact-icon {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            color: var(--color-accent);
+        }
+        .contact-list a { font-weight: 500; }
+        .contact-form-row {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-sm);
+        }
+        .contact-form-row:last-of-type { margin-bottom: 0; }
+        .contact-form label {
+            flex-shrink: 0;
+            width: 5rem;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: var(--color-text);
+        }
+        .contact-form input,
+        .contact-form textarea {
+            flex: 1;
+            min-width: 0;
+            padding: var(--space-sm);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            color: var(--color-text);
+            background: var(--color-bg-card);
+            box-sizing: border-box;
+            transition: border-color var(--transition), box-shadow var(--transition);
+        }
+        .contact-form textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        .contact-form .form-row-message {
+            align-items: flex-start;
+        }
+        .contact-form .form-row-message label { padding-top: var(--space-xs); }
+        .contact-form .form-row-button {
+            margin-top: var(--space-sm);
+            margin-bottom: 0;
+        }
+        .contact-form .form-row-button span {
+            width: 5rem;
+            flex-shrink: 0;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 3px rgba(51, 65, 85, 0.08);
+        }
+        .contact-form button {
+            padding: var(--space-sm) var(--space-lg);
+            background: var(--color-accent);
+            color: #fff;
+            font-family: var(--font-sans);
+            font-size: 0.9375rem;
+            font-weight: 600;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            transition: background var(--transition), box-shadow var(--transition);
+        }
+        .contact-form button:hover {
+            background: var(--color-accent-soft);
+            box-shadow: var(--shadow-md);
+        }
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         footer {
-            background-color: var(--text-color);
-            color: white;
+            padding: var(--space-lg) 0;
             text-align: center;
-            padding: 2rem;
+            font-size: 0.875rem;
+            color: var(--color-text-muted);
+            border-top: 1px solid var(--color-border-soft);
+            background: var(--color-bg-card);
         }
 
-        /* Responsive Design */
-        @media (min-width: 768px) {
-            .hero-content {
-                grid-template-columns: 300px 1fr;
-                text-align: left;
-            }
-
-            .hero-photo {
-                margin: 0;
-            }
-
-            .nav-links {
-                display: flex !important;
-            }
-
-            /* Show all 4 languages in one row on larger screens */
-            .lang-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-
-            .menu-toggle {
+        @media (max-width: 640px) {
+            .nav-desktop { display: none; }
+            .nav-toggle { display: block; }
+            .nav-mobile {
                 display: none;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .nav-links {
                 position: absolute;
                 top: 100%;
                 left: 0;
                 right: 0;
-                background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+                background: var(--color-bg);
+                border-bottom: 1px solid var(--color-border);
+                padding: var(--space-md);
                 flex-direction: column;
-                padding: 1rem;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-                display: none;
+                gap: var(--space-xs);
             }
-
-            .nav-links.active {
-                display: flex;
+            .nav-mobile.is-open { display: flex; }
+            .nav-mobile a {
+                padding: var(--space-sm);
+                color: var(--color-text);
+                text-decoration: none;
+                font-weight: 500;
             }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            nav {
-                position: relative;
-            }
-        }
-
-        /* Extra-small devices: tighten paddings and force single-column grids to avoid overflow */
-        @media (max-width: 360px) {
-            nav { padding: 0.5rem 1rem; }
-            .section-container { padding-left: 1rem; padding-right: 1rem; }
-            .projects-grid { grid-template-columns: 1fr; }
-            .edu-grid { grid-template-columns: 1fr; }
-            .lang-grid { grid-template-columns: 1fr; }
-        }
-
-        /* Utilities */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
-        }
-
-        /* Focus styles for accessibility */
-        *:focus {
-            outline: 2px solid var(--primary-color);
-            outline-offset: 2px;
-        }
-
-        /* Smooth animations */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation: none !important;
-                transition: none !important;
-            }
-
-            html {
-                scroll-behavior: auto;
-            }
+            .site-header .wrap { position: relative; }
         }
     </style>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <header>
-        <nav role="navigation" aria-label="Main navigation">
-            <a href="#" class="logo" aria-label="Mustansar Cheema Portfolio">
-                <img src="images/mustansar_cheema_logo.png" alt="Mustansar Cheema Logo" />
-            </a>
-            <ul class="nav-links" role="list">
-                <li><a href="#about" aria-label="Go to About section">About</a></li>
-                <li><a href="#languages" aria-label="Go to Languages section">Languages</a></li>
-                <li><a href="#education" aria-label="Go to Education section">Education</a></li>
-                <li><a href="#skills" aria-label="Go to Skills section">Skills</a></li>
-                <li><a href="#experience" aria-label="Go to Experience section">Experience</a></li>
-                <li><a href="#contact" aria-label="Go to Contact section">Contact</a></li>
-            </ul>
-            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" id="menuToggle">☰</button>
-        </nav>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <header class="site-header">
+        <div class="wrap">
+            <nav class="nav-desktop" aria-label="Main">
+                <a href="#about">About</a>
+                <a href="#core-competencies">Core Competencies</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#key-achievements">Key Achievements</a>
+                <a href="#education">Education</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#languages">Languages</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+            <nav class="nav-mobile" aria-label="Main mobile" id="nav-mobile">
+                <a href="#about">About</a>
+                <a href="#core-competencies">Core Competencies</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#key-achievements">Key Achievements</a>
+                <a href="#education">Education</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#languages">Languages</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="hero-content">
-                <img src="images/msc.jpg" 
-                     alt="Mustansar Cheema profile photo" 
-                     class="hero-photo">
-                <div class="hero-text">
-                    <h1 id="hero-title">Mustansar Cheema</h1>
-                    <p id="animated-subtitle">IT Manager & Digital Transformation Leader | Dubai, UAE</p>
-                    <a href="#contact" class="cta-button">Get In Touch</a>
+    <main id="main">
+        <section id="hero" class="hero section-id">
+            <div class="wrap">
+                <img src="images/msc.jpg" alt="Mustansar Cheema" class="hero-photo">
+                <div class="hero-content">
+                    <h1>Mustansar Cheema</h1>
+                    <p class="hero-title-wrap"><span id="typewriter-title"></span><span class="typewriter-cursor" aria-hidden="true">|</span></p>
+                    <a href="#contact" class="cta">Contact</a>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section class="about" id="about" aria-labelledby="about-title">
-            <div class="section-container">
-                <h2 class="section-title" id="about-title">About Me</h2>
-                <div class="about-wrapper">
-                    <div class="about-card">
-                        <div class="about-heading">
-                            <span class="emoji">🧭</span>
-                            <h3 style="margin: 0; color: var(--primary-color); font-size: 1.25rem;">Strategic IT Leadership</h3>
+        <section id="about" class="about-competencies section-id">
+            <div class="wrap about-competencies-grid">
+                <div class="about-col">
+                    <h2>About</h2>
+                    <p>Enterprise IT leader with 20+ years of experience delivering large-scale IT programs, enterprise platforms, and digital transformation across multi-business environments. Evolved from hands-on developer to senior IT leadership, applying PMP®-based program delivery and ITIL®-driven service management to execute digital strategy roadmaps aligned with business objectives. Strong expertise across enterprise applications, infrastructure, cloud strategy, cybersecurity, and data-driven decision support, including Salesforce, HubSpot, Sage ERP, HIMS, HRMS, and Microsoft 365. Extensive experience leading technology delivery for international conferences and exhibitions, as well as healthcare, finance, trading, media, food and beverage, tailoring, retail, and government sectors. Known for building resilient, secure IT ecosystems and delivering measurable business outcomes.</p>
+                </div>
+                <div class="competencies-col" id="core-competencies">
+                    <h2>Core Competencies</h2>
+                    <ul class="competencies-list">
+                        <li>Enterprise IT Strategy & Governance</li>
+                        <li>Digital Transformation Leadership</li>
+                        <li>Executive Stakeholder Management</li>
+                        <li>Program & Portfolio Delivery</li>
+                        <li>Business Process Optimization</li>
+                        <li>Cybersecurity & Risk Oversight</li>
+                        <li>Operations Management</li>
+                        <li>Vendor & Contract Negotiation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section-id">
+            <div class="wrap">
+                <h2>Skills</h2>
+                <details class="skills-group">
+                    <summary>Leadership, Strategy & Governance</summary>
+                    <ul class="skills-tags">
+                        <li>Enterprise IT Leadership</li>
+                        <li>Digital Transformation</li>
+                        <li>IT Strategy</li>
+                        <li>IT Governance</li>
+                        <li>Compliance Management</li>
+                    </ul>
+                </details>
+                <details class="skills-group">
+                    <summary>Cybersecurity</summary>
+                    <ul class="skills-tags">
+                        <li>Cybersecurity & Risk Management</li>
+                        <li>IT Service Management</li>
+                    </ul>
+                </details>
+                <details class="skills-group">
+                    <summary>Project, Program & Portfolio Management</summary>
+                    <ul class="skills-tags">
+                        <li>PMP®</li>
+                        <li>Stakeholder Management</li>
+                        <li>Cross-Functional Team Leadership</li>
+                        <li>IT Project Management</li>
+                        <li>Program Management</li>
+                        <li>Information Systems Project Management</li>
+                        <li>Agile Project Management</li>
+                        <li>Risk Management</li>
+                        <li>Scope Management</li>
+                        <li>Dependency Management</li>
+                        <li>Budget Management</li>
+                        <li>Vendor Management</li>
+                        <li>Contract Management</li>
+                    </ul>
+                </details>
+                <details class="skills-group">
+                    <summary>Cloud, SaaS & Enterprise Platforms</summary>
+                    <ul class="skills-tags">
+                        <li>Software as a Service (SaaS)</li>
+                        <li>SaaS Platform Implementation</li>
+                        <li>Oracle Cloud Infrastructure (OCI)</li>
+                        <li>OCI Governance & Administration</li>
+                        <li>OCI Security & Identity Management</li>
+                        <li>OCI Cost Management & Billing</li>
+                        <li>Amazon Web Services (AWS)</li>
+                        <li>Microsoft 365</li>
+                        <li>Microsoft Defender</li>
+                        <li>Microsoft Intune</li>
+                        <li>Data Protection & DLP</li>
+                    </ul>
+                </details>
+                <details class="skills-group">
+                    <summary>Enterprise Applications & Industry Systems</summary>
+                    <ul class="skills-tags">
+                        <li>Sage X3 (ERP)</li>
+                        <li>ERP Systems</li>
+                        <li>Event Management Systems</li>
+                        <li>CRM & Marketing Automation</li>
+                        <li>Hospital Information Management System (HIMS)</li>
+                        <li>Electronic Medical Records (EMR)</li>
+                        <li>PACS & Medical Imaging Integration</li>
+                        <li>Data Migration</li>
+                        <li>System Integration</li>
+                        <li>E-Commerce Platforms</li>
+                    </ul>
+                </details>
+                <details class="skills-group">
+                    <summary>Infrastructure, Network & Data Center</summary>
+                    <ul class="skills-tags">
+                        <li>Enterprise Network Architecture</li>
+                        <li>Network Design & Implementation</li>
+                        <li>Multi-Site Network Deployment</li>
+                        <li>Network Security</li>
+                        <li>Firewall Management</li>
+                        <li>Cisco Meraki</li>
+                        <li>Data Center Architecture</li>
+                        <li>Data Center Deployment</li>
+                        <li>IT Infrastructure Operations</li>
+                        <li>Infrastructure Management</li>
+                    </ul>
+                </details>
+                <details class="skills-group">
+                    <summary>Physical Security & Smart Systems</summary>
+                    <ul class="skills-tags">
+                        <li>CCTV & Access Control Systems</li>
+                        <li>Physical Security Systems</li>
+                        <li>Building Technology Systems</li>
+                        <li>AI-Enabled Video Analytics</li>
+                        <li>Hikvision CCTV & Access Control</li>
+                    </ul>
+                </details>
+                <details class="skills-group">
+                    <summary>Software Engineering & Data</summary>
+                    <ul class="skills-tags">
+                        <li>Software Development</li>
+                        <li>Software System Analysis</li>
+                        <li>Database Administration</li>
+                        <li>Oracle Database</li>
+                        <li>Oracle Database Administration</li>
+                        <li>MySQL</li>
+                        <li>SQL</li>
+                        <li>Java</li>
+                        <li>PHP</li>
+                        <li>JavaScript</li>
+                        <li>JSP</li>
+                        <li>AJAX</li>
+                    </ul>
+                </details>
+                <details class="skills-group">
+                    <summary>Tools & Platforms</summary>
+                    <ul class="skills-tags">
+                        <li>Windows Server</li>
+                        <li>Active Directory</li>
+                        <li>Microsoft Exchange</li>
+                        <li>Jira Software</li>
+                        <li>Jira Service Management</li>
+                        <li>Microsoft Project</li>
+                        <li>ManageEngine</li>
+                    </ul>
+                </details>
+            </div>
+        </section>
+
+        <section id="experience" class="section-id">
+            <div class="wrap">
+                <h2>Experience</h2>
+                <article class="experience-item">
+                    <details class="experience-details">
+                        <summary>
+                            <span class="experience-summary-inner">
+                                <span class="experience-summary-role">IT Manager</span>
+                                <span class="experience-summary-meta">INDEX Holding, Dubai · <span class="duration">May 2007 – November 2025</span> (18 years 6 months)</span>
+                                <span class="experience-summary-meta">Promoted through roles: Software Developer → IT Supervisor → IT Manager</span>
+                            </span>
+                        </summary>
+                        <ul class="experience-list">
+                            <li>Provided enterprise IT leadership across INDEX Holding and its subsidiaries, aligning digital initiatives with business strategy across exhibitions, healthcare, media, retail, F&B, tailoring, and government sectors.</li>
+                            <li>Led application, web, and mobile development programs including event management platforms, custom enterprise applications, mobile apps, loyalty systems, and e-commerce solutions, driving operational efficiency and customer engagement.</li>
+                            <li>Directed end-to-end delivery of enterprise platforms including Salesforce, HubSpot, E-Touches, HIMS, HRMS, Sage ERP, and Microsoft 365 E5, strengthening system integration, reporting, and service delivery.</li>
+                            <li>Owned IT technology delivery for large-scale international conferences and exhibitions, managing onsite infrastructure, networks, applications, security, and real-time operations across the UAE and overseas venues.</li>
+                            <li>Led organization-wide infrastructure modernization initiatives, including Microsoft Teams Direct Routing migration and Cisco Meraki network rollout across headquarters and 25 branch offices.</li>
+                            <li>Championed process mapping, digital automation, and data-driven decision-making across business units, reducing manual effort and improving operational visibility.</li>
+                            <li>Partnered with executive leadership on IT strategy, annual budgeting (CAPEX / OPEX), cybersecurity posture, vendor selection, and contract negotiations.</li>
+                            <li>Built and led a multi-disciplinary IT team across infrastructure, applications, and operations, driving performance, accountability, and continuous capability development.</li>
+                        </ul>
+                    </details>
+                </article>
+                <article class="experience-item">
+                    <details class="experience-details">
+                        <summary>
+                            <span class="experience-summary-inner">
+                                <span class="experience-summary-role">Software Engineer</span>
+                                <span class="experience-summary-meta">Digital Track, Sialkot · <span class="duration">February 2005 – March 2007</span> (2 years 2 months)</span>
+                            </span>
+                        </summary>
+                        <ul class="experience-list">
+                            <li>Designed and developed custom ERP, retail, and web-based applications using Oracle 8, Developer 6i, and JSP, delivering solutions aligned with business requirements.</li>
+                            <li>Led full SDLC activities including requirements analysis, system design, development, testing, deployment, and post-implementation support.</li>
+                            <li>Collaborated closely with business stakeholders to ensure application scalability, usability, and operational effectiveness.</li>
+                        </ul>
+                    </details>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="section-id">
+            <div class="wrap">
+                <h2>Projects</h2>
+                <article class="project">
+                    <details class="project-details">
+                        <summary>
+                            <span class="project-summary-inner">
+                                <span class="project-summary-title">Enterprise Distribution & Inventory Management System</span>
+                                <span class="project-summary-dates">2004 – 2007</span>
+                            </span>
+                        </summary>
+                        <div class="project-content">
+                            <p>Designed, developed, and implemented an enterprise distribution and inventory management system for multiple distributors using Oracle 8 and Oracle Developer 6i. The solution covered inventory control, stock movement, purchase and sales processing, expense tracking, and employee management including payroll and salary administration. Built with strong database architecture and PL/SQL-based business logic, the system enabled accurate transaction processing, MIS reporting, and operational visibility across distributor operations, supporting scalable and ERP-style distribution workflows.</p>
                         </div>
-                        <p class="about-text">Strategic IT Professional with 20+ years of experience leading enterprise IT initiatives, software development, and digital transformation across diverse sectors. Evolved from hands-on developer to cross-functional leader, consistently aligning technology with business goals. Skilled in infrastructure optimization, cybersecurity, and implementation of enterprise platforms including Salesforce, HubSpot, Sage ERP, HRMS, and Microsoft 365.</p>
-                        <p class="about-text" style="margin-top: 1rem;">Successfully led IT operations for major projects across conferences and exhibitions, healthcare, finance, trading, media, food and beverage, tailoring, retail, and government sectors. Known for building resilient IT ecosystems, driving innovation, and delivering measurable business value.</p>
-                        <div class="about-chips">
-                            <span class="chip primary">Digital Transformation</span>
-                            <span class="chip">Cloud (AWS)</span>
-                            <span class="chip">Enterprise Systems</span>
-                            <span class="chip">Cybersecurity</span>
-                            <span class="chip">Network Architecture</span>
+                    </details>
+                </article>
+                <article class="project">
+                    <details class="project-details">
+                        <summary>
+                            <span class="project-summary-inner">
+                                <span class="project-summary-title">Enterprise Event Management & Registration Platform</span>
+                                <span class="project-summary-dates">2007 – 2011</span>
+                            </span>
+                        </summary>
+                        <div class="project-content">
+                            <p>Designed and developed an enterprise event management and registration platform for INDEX Conferences and Exhibitions, supporting multiple large-scale conferences and exhibitions over several years. The platform enabled online, backend, and group registrations, customer self-registration, secure payment gateway integration, self-service badge and certificate printing with automated credit hour calculations, and dedicated on-site registration modules. It also included CRM functionalities, management and marketing reporting, and full event lifecycle management to support high-volume attendee operations. The core operational system was built as a Java-based desktop application, with customer-facing portals developed in PHP and supported by a MySQL database. Led the project as Senior Software Developer, contributing to system design, software development, database administration, system analysis, and implementation alongside other team members.</p>
                         </div>
+                    </details>
+                </article>
+                <article class="project">
+                    <details class="project-details">
+                        <summary>
+                            <span class="project-summary-inner">
+                                <span class="project-summary-title">Aventri (eTouches) Event Management Platform Implementation</span>
+                                <span class="project-summary-dates">2015</span>
+                            </span>
+                        </summary>
+                        <div class="project-content">
+                            <p>Led the implementation of the eTouches SaaS-based event management platform following a structured evaluation of multiple solutions, selecting it based on business fit, scalability, and risk considerations as part of the organization's transition from an in-house system to an enterprise cloud solution. Owned the full project lifecycle from initiation and planning through execution and go-live, managing scope, timelines, data migration, and coordination with internal stakeholders and the vendor. Enabled core platform capabilities including online and onsite registration, attendee management, CRM, email marketing, audience segmentation, reporting, analytics, and more. Led change management activities including user training, stakeholder engagement, and controlled handover to operations, ensuring smooth adoption and sustainable system usage across events.</p>
+                        </div>
+                    </details>
+                </article>
+                <article class="project">
+                    <details class="project-details">
+                        <summary>
+                            <span class="project-summary-inner">
+                                <span class="project-summary-title">Sage ERP Implementation & Cloud Transition</span>
+                                <span class="project-summary-dates">2015 – 2016</span>
+                            </span>
+                        </summary>
+                        <div class="project-content">
+                            <p>Led the organization-wide implementation of Sage ERP, managing the full lifecycle from solution evaluation and vendor selection to deployment and steady-state operations, in close coordination with finance leadership and key business stakeholders. The system was initially implemented in the on-premises data center, where I oversaw security controls, system configuration, upgrades, and ongoing maintenance to ensure stability and compliance. The ERP centralized core finance functions including procurement, payables, receivables, cheque processing, general ledger, statutory reporting, and financial analytics. I also coordinated integrations with internal CRM platforms to enable end-to-end financial visibility across departments. In 2024, I worked closely with vendors and internal stakeholders to support and execute the migration to the cloud, improving scalability, availability, and long-term operational efficiency while ensuring data integrity and minimal business disruption.</p>
+                        </div>
+                    </details>
+                </article>
+                <article class="project">
+                    <details class="project-details">
+                        <summary>
+                            <span class="project-summary-inner">
+                                <span class="project-summary-title">IT Infrastructure Implementation – INDEX Holding Headquarters</span>
+                                <span class="project-summary-dates">2016 – 2017</span>
+                            </span>
+                        </summary>
+                        <div class="project-content">
+                            <p>This project was initiated in 2016 and delivered in 2017 to design and implement a complete IT infrastructure for the newly constructed INDEX Holding headquarters in Dubai. The objective was to enable a smooth transition to the new facility while ensuring a scalable, secure, and fully operational technology environment from day one. The scope included structured cabling, enterprise networking, data center setup, servers, switching, firewalls, and a centralized Wi-Fi solution covering the entire building. Internet connectivity was established through Etisalat, followed by end-user migration from the old office to the new headquarters, ensuring uninterrupted business operations during the transition. The project also covered modernization of the existing voice and communication environment, meeting room technology setup, and deployment of building security systems including CCTV and access control. Delivery required close coordination with facilities, management, and business stakeholders to align technical designs with building constraints, operational needs, and organizational standards. The project was executed through structured planning, stakeholder engagement, phased implementation, and controlled migration activities, resulting in a stable and future-ready IT foundation for the organization's headquarters.</p>
+                        </div>
+                    </details>
+                </article>
+                <article class="project">
+                    <details class="project-details">
+                        <summary>
+                            <span class="project-summary-inner">
+                                <span class="project-summary-title">Event Management Application Development (Web + Mobile)</span>
+                                <span class="project-summary-dates">2017 – 2024</span>
+                            </span>
+                        </summary>
+                        <div class="project-content">
+                            <p>In 2017, the organization initiated the redevelopment of a fully in-house event management platform to regain control over customization, scalability, and data ownership after earlier use of both custom-built and SaaS-based solutions. I led the project from initiation through delivery to end users, managing the complete development lifecycle and supporting the team throughout planning, design, development, testing, deployment, and post-go-live stabilization. The project was delivered using Scrum methodology, with structured sprint planning, backlog management, and regular stakeholder reviews to ensure continuous alignment with business objectives. The solution was implemented as a web-based platform with supporting mobile applications, providing role-based access for attendees, exhibitors, and internal teams. Key capabilities included online and onsite registration, exhibitor and attendee management, CRM and marketing workflows, SMS and email integrations, task and checklist management for event execution, data segmentation and merging, and integrated communication features such as click-to-call initiation directly from the platform. The system covered all core functionalities expected from a modern event management solution while remaining adaptable to business-specific workflows. The platform was built using PHP and MySQL on AWS cloud infrastructure, leveraging microservices architecture and CI/CD pipelines to support scalability, reliability, and continuous delivery. Cross-functional development teams based in Pakistan and the UAE worked collaboratively across analysis, development, quality assurance, deployment, and operational support to ensure a stable and production-ready solution.</p>
+                        </div>
+                    </details>
+                </article>
+                <article class="project">
+                    <details class="project-details">
+                        <summary>
+                            <span class="project-summary-inner">
+                                <span class="project-summary-title">Simplex HIMS implementation @ INDEX Medical Centre</span>
+                                <span class="project-summary-dates">2019</span>
+                            </span>
+                        </summary>
+                        <div class="project-content">
+                            <p>Implemented Simplex HIMS, a cloud-based SaaS Healthcare Information Management System, covering the complete patient journey from appointment booking to secure electronic medical records. The solution supported doctors and patients workflows, including consultations, clinical findings, prescriptions, endoscopy modules, PACS imaging, MWL integration, laboratory results, and centralized patient data management within a structured database. The scope also included billing, payments, and end-to-end insurance workflows with defined SLAs. Led user training for doctors, clinical staff, and administrative teams to ensure smooth adoption, along with data migration from legacy systems, validation of historical records, and prescription verification aligned with ICD-10 and HL7 standards to ensure compliance, data integrity, and operational continuity.</p>
+                        </div>
+                    </details>
+                </article>
+                <article class="project">
+                    <details class="project-details">
+                        <summary>
+                            <span class="project-summary-inner">
+                                <span class="project-summary-title">Microsoft 365 E5 Platform Upgrade & Security Enablement</span>
+                                <span class="project-summary-dates">2024</span>
+                            </span>
+                        </summary>
+                        <div class="project-content">
+                            <p>As part of a broader modernization effort, the organization upgraded its collaboration and productivity platform to Microsoft 365 E5. The scope included migration from legacy email and file systems to Exchange Online, SharePoint Online, and OneDrive, along with identity and access integration, tenant configuration, and enablement of E5 security and compliance capabilities to replace fragmented legacy environments. The upgrade also introduced enterprise-grade device and data security, including endpoint protection, conditional access, and data loss prevention (DLP) controls to safeguard information across users, devices, and locations. Delivery was structured to ensure business continuity, with migration activities carefully sequenced and coordinated across IT teams, vendors, and business users. User adoption was supported through structured training sessions, guidance materials, and hands-on support, while data validation, functional testing, and post-upgrade stabilization confirmed service integrity. Security, governance, and compliance controls were embedded into the platform design, resulting in a centrally managed environment that improved collaboration, strengthened security posture, and simplified ongoing operations.</p>
+                        </div>
+                    </details>
+                </article>
+                <article class="project">
+                    <details class="project-details">
+                        <summary>
+                            <span class="project-summary-inner">
+                                <span class="project-summary-title">Enterprise Network Infrastructure Transformation</span>
+                                <span class="project-summary-dates">2025</span>
+                            </span>
+                        </summary>
+                        <div class="project-content">
+                            <p>The organization's enterprise network infrastructure was upgraded to establish a standardized, high-performance connectivity platform across 25 branches, supporting business-critical systems and daily operations. The scope included network design and implementation using Cisco Meraki, enabling centralized cloud-based management, improved visibility, and consistent configuration across all locations. Core switching, access switching, enterprise wireless infrastructure, and next-generation firewalls were deployed to enhance performance and strengthen network security. Execution required coordinated rollout activities across multiple sites while maintaining uninterrupted business operations. Secure site-to-site connectivity was implemented to interconnect all branches, with firewall policies and network segmentation enforced to protect applications and data flows. Coordination with vendors, internal IT teams, and facility stakeholders ensured site readiness and smooth deployment. Configuration standards, security controls, and performance validation were applied throughout delivery, followed by formal testing and controlled handover to operations, resulting in a stable, scalable, and centrally managed enterprise network environment.</p>
+                        </div>
+                    </details>
+                </article>
+                <article class="project">
+                    <details class="project-details">
+                        <summary>
+                            <span class="project-summary-inner">
+                                <span class="project-summary-title">Data Center Modernization & Resilience Upgrade</span>
+                                <span class="project-summary-dates">2025</span>
+                            </span>
+                        </summary>
+                        <div class="project-content">
+                            <p>This project focused on modernizing the enterprise data center to strengthen resilience, operational stability, and alignment with long-term organizational objectives. The scope covered solution evaluation, design, and implementation of Huawei FusionModule 800 as the core integrated data center platform. Key upgrades included rack infrastructure, centralized monitoring, and full power and cooling redundancy to eliminate single points of failure and improve availability of critical systems. Execution required close coordination with facilities and civil teams to align technical requirements with building constraints, safety standards, and physical layouts. The project also included implementation of a fire-rated data center environment with an integrated fire detection and fire extinguishing system, along with structured network cabling, optimized connectivity, and enhanced physical security controls. Continuous engagement with top management ensured the design and delivery remained aligned with organizational goals. Vendor activities, internal teams, and technical dependencies were controlled throughout execution, with formal testing and acceptance completed prior to operational handover, resulting in a resilient and future-ready data center environment.</p>
+                        </div>
+                    </details>
+                </article>
+                <article class="project">
+                    <details class="project-details">
+                        <summary>
+                            <span class="project-summary-inner">
+                                <span class="project-summary-title">Centralized CCTV & Access Control Modernization</span>
+                                <span class="project-summary-dates">2025</span>
+                            </span>
+                        </summary>
+                        <div class="project-content">
+                            <p>The organization's physical security environment was modernized to establish centralized visibility, stronger access control, and improved operational oversight across 25 branches. The project involved upgrading legacy surveillance and access systems to a Hikvision-based CCTV and access control platform, enabling high-definition monitoring, advanced analytics, and tighter security controls. A centralized control room was established at HQ, allowing real-time access to live CCTV streams from all branches through a unified monitoring interface. The solution was enhanced with AI-based analytics to detect events, generate alerts, and notify relevant stakeholders proactively. Facial recognition-based access control was introduced to modernize entry management, strengthen security, and reduce manual intervention. As part of the implementation, access control data was leveraged to enable automated employee attendance tracking, which was later integrated with the HRMS system. Delivery required close coordination with facilities, security teams, vendors, and IT stakeholders to align installations, testing, and operational handover. The outcome was a fully centralized, intelligent security environment that improved visibility, response time, and operational efficiency.</p>
+                        </div>
+                    </details>
+                </article>
+            </div>
+        </section>
+
+        <section id="key-achievements" class="section-id">
+            <div class="wrap">
+                <h2>Key Achievements</h2>
+                <ul class="achievements-list">
+                    <li>
+                        <span class="achievement-heading">Enterprise Digital Transformation</span>
+                        <p class="achievement-text">Led enterprise-wide digital transformation across INDEX Holding and its subsidiaries, consolidating CRM, ERP, HIMS, HRMS, and Microsoft 365 into a unified, scalable technology ecosystem.</p>
+                    </li>
+                    <li>
+                        <span class="achievement-heading">IT Operations – Exhibitions & Conferences</span>
+                        <p class="achievement-text">Directed IT operations for 350+ international exhibitions and conferences, ensuring secure connectivity, system reliability, and zero major technology disruptions during live events.</p>
+                    </li>
+                    <li>
+                        <span class="achievement-heading">Simplex HIMS – INDEX Medical Centre</span>
+                        <p class="achievement-text">Led the implementation of the Simplex HIMS at INDEX Medical Centre, streamlining patient management, clinical operations, diagnostics, billing, and insurance workflows through a secure, integrated healthcare platform.</p>
+                    </li>
+                    <li>
+                        <span class="achievement-heading">Enterprise Applications Portfolio</span>
+                        <p class="achievement-text">Led the design and development of a broad portfolio of enterprise-level applications, including event management systems, mobile applications, loyalty solutions, and customer-facing digital platforms, enabling automation, real-time reporting, and improved customer engagement.</p>
+                    </li>
+                    <li>
+                        <span class="achievement-heading">Microsoft Teams Direct Routing Migration</span>
+                        <p class="achievement-text">Successfully migrated legacy Cisco telephony to Microsoft Teams Direct Routing, improving collaboration across locations while reducing operational and infrastructure costs.</p>
+                    </li>
+                    <li>
+                        <span class="achievement-heading">Cisco Meraki Network Implementation</span>
+                        <p class="achievement-text">Implemented a centralized Cisco Meraki network across headquarters and 25 branch offices, enhancing security visibility, performance, and centralized management.</p>
+                    </li>
+                    <li>
+                        <span class="achievement-heading">Data Centre Modernization</span>
+                        <p class="achievement-text">Modernized data centre infrastructure using Huawei FusionModule 800, delivering high availability, improved energy efficiency, and 24/7 business continuity for mission-critical systems.</p>
+                    </li>
+                    <li>
+                        <span class="achievement-heading">CCTV & Physical Security Program</span>
+                        <p class="achievement-text">Led an organization-wide CCTV and physical security enhancement program across headquarters and multi-site operations, delivering 24/7 centralized monitoring, AI-based notifications, improved incident response, and enhanced security governance.</p>
+                    </li>
+                    <li>
+                        <span class="achievement-heading">AWS Cloud Adoption</span>
+                        <p class="achievement-text">Enabled cloud adoption on AWS, improving scalability, disaster recovery readiness, and application performance across business units.</p>
+                    </li>
+                    <li>
+                        <span class="achievement-heading">IT Governance Frameworks</span>
+                        <p class="achievement-text">Established and strengthened enterprise IT governance frameworks and IT policies, aligning technology strategy, risk management, compliance, and service delivery with business objectives, while ensuring consistent standards, effective controls, and clear accountability across the organization.</p>
+                    </li>
+                    <li>
+                        <span class="achievement-heading">High-Performing IT Team</span>
+                        <p class="achievement-text">Built and led a high-performing IT team, strengthening delivery capability, ownership, and continuous professional development across infrastructure, applications, and operations.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education" class="section-id">
+            <div class="wrap">
+                <h2>Education</h2>
+                <div class="credentials-list">
+                    <div class="credential">
+                        <p class="credential-title">Master of Information Technology</p>
+                        <p class="credential-meta">University of the Punjab, Pakistan · 2007</p>
                     </div>
-
-                    <div class="about-card">
-                        <div class="about-heading">
-                            <span class="emoji">✨</span>
-                            <h3 style="margin: 0; color: var(--primary-color); font-size: 1.25rem;">Highlights</h3>
-                        </div>
-                        <div class="about-highlights">
-                            <div class="highlight-item">
-                                <div class="highlight-icon" aria-hidden="true">👥</div>
-                                <div>
-                                    <div class="highlight-title">Leadership & Mentorship</div>
-                                    <div class="highlight-desc">Built and led high-performing teams across infrastructure, applications, and operations.</div>
-                                </div>
-                            </div>
-                            <div class="highlight-item">
-                                <div class="highlight-icon" aria-hidden="true">💻</div>
-                                <div>
-                                    <div class="highlight-title">Applications Development</div>
-                                    <div class="highlight-desc">Design and develop enterprise applications, mobile apps, and custom solutions using modern technologies.</div>
-                                </div>
-                            </div>
-                            <div class="highlight-item">
-                                <div class="highlight-icon" aria-hidden="true">⚙️</div>
-                                <div>
-                                    <div class="highlight-title">Enterprise Implementations</div>
-                                    <div class="highlight-desc">Delivered Salesforce, HubSpot, HRMS, ERP and Microsoft 365 integrations end-to-end.</div>
-                                </div>
-                            </div>
-                            <div class="highlight-item">
-                                <div class="highlight-icon" aria-hidden="true">🌐</div>
-                                <div>
-                                    <div class="highlight-title">Network & Cloud</div>
-                                    <div class="highlight-desc">Cisco Meraki across 25 branches and AWS adoption for scalable, secure operations.</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        
+                    <div class="credential">
+                        <p class="credential-title">Bachelor of Computer Science</p>
+                        <p class="credential-meta">AIOU, Pakistan · 2003</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Languages Section -->
-        <section class="languages" id="languages" aria-labelledby="languages-title">
-            <div class="section-container">
-                <h2 class="section-title" id="languages-title">Languages</h2>
-                <div class="lang-grid" role="list">
-                    <div class="lang-card" role="listitem">
-                        <div class="lang-header">
-                            <div class="lang-icon" aria-hidden="true">🇬🇧</div>
-                            <div class="lang-name">English</div>
-                        </div>
-                        <div class="lang-bar"><span style="--level: 100%"></span></div>
-                        <div class="lang-meta"><span>Fluent</span><span>5/5</span></div>
+        <section id="certifications" class="section-id">
+            <div class="wrap">
+                <h2>Certifications</h2>
+                <div class="credentials-list">
+                    <div class="credential">
+                        <p class="credential-title">Project Management Professional (PMP®)</p>
+                        <p class="credential-meta">Project Management Institute (PMI®)</p>
                     </div>
-                    <div class="lang-card" role="listitem">
-                        <div class="lang-header">
-                            <div class="lang-icon" aria-hidden="true">🇵🇰</div>
-                            <div class="lang-name">Urdu</div>
-                        </div>
-                        <div class="lang-bar"><span style="--level: 100%"></span></div>
-                        <div class="lang-meta"><span>Fluent</span><span>5/5</span></div>
+                    <div class="credential">
+                        <p class="credential-title">ITIL® 4 Foundation in ITSM</p>
+                        <p class="credential-meta">AXELOS / PeopleCert</p>
                     </div>
-                    <div class="lang-card" role="listitem">
-                        <div class="lang-header">
-                            <div class="lang-icon" aria-hidden="true">🇵🇰</div>
-                            <div class="lang-name">Punjabi</div>
-                        </div>
-                        <div class="lang-bar"><span style="--level: 80%"></span></div>
-                        <div class="lang-meta"><span>Advanced</span><span>4/5</span></div>
-                    </div>
-                    <div class="lang-card" role="listitem">
-                        <div class="lang-header">
-                            <div class="lang-icon" aria-hidden="true">🇦🇪</div>
-                            <div class="lang-name">Arabic</div>
-                        </div>
-                        <div class="lang-bar"><span style="--level: 40%"></span></div>
-                        <div class="lang-meta"><span>Conversational</span><span>2/5</span></div>
+                    <div class="credential">
+                        <p class="credential-title">OCI Foundations Associate</p>
+                        <p class="credential-meta">Oracle University</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Education Section -->
-        <section class="education" id="education" aria-labelledby="education-title">
-            <div class="section-container">
-                <h2 class="section-title" id="education-title">Education</h2>
-                <div class="edu-grid" role="list">
-                    <div class="edu-card" role="listitem" aria-label="Master of Information Technology, 2007">
-                        <div class="edu-icon" aria-hidden="true">🎓</div>
-                        <div class="edu-body">
-                            <h3>Master of Information Technology</h3>
-                            <p>University of the Punjab, Pakistan</p>
-                            <div class="edu-meta">2007</div>
+        <section id="languages" class="section-id">
+            <div class="wrap">
+                <h2>Languages</h2>
+                <div class="credentials-list">
+                    <div class="credential">
+                        <p class="credential-title">English – Fluent</p>
+                        <div class="language-progress-bar" role="presentation" aria-hidden="true">
+                            <div class="language-progress-fill" style="width: 100%"></div>
                         </div>
                     </div>
-                    <div class="edu-card" role="listitem" aria-label="Bachelor of Computer Science, 2003">
-                        <div class="edu-icon" aria-hidden="true">📜</div>
-                        <div class="edu-body">
-                            <h3>Bachelor of Computer Science</h3>
-                            <p>AIOU, Pakistan</p>
-                            <div class="edu-meta">2003</div>
+                    <div class="credential">
+                        <p class="credential-title">Urdu – Native</p>
+                        <div class="language-progress-bar" role="presentation" aria-hidden="true">
+                            <div class="language-progress-fill" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="credential">
+                        <p class="credential-title">Punjabi – Native</p>
+                        <div class="language-progress-bar" role="presentation" aria-hidden="true">
+                            <div class="language-progress-fill" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="credential">
+                        <p class="credential-title">Arabic – Reading & Writing</p>
+                        <div class="language-progress-bar" role="presentation" aria-hidden="true">
+                            <div class="language-progress-fill" style="width: 50%"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section class="skills" id="skills" aria-labelledby="skills-title">
-            <div class="section-container">
-                <h2 class="section-title" id="skills-title">Core Competencies</h2>
-                
-                <!-- Skills Categories -->
-                <div style="max-width: 1200px; margin: 0 auto;">
-                    <h3 style="font-size: 1.25rem; color: var(--text-color); margin-bottom: 1rem; margin-top: 2rem;">🛠️ Technology & Platforms</h3>
-                    <div class="skills-grid" role="list">
-                        <div class="skill-badge" role="listitem">Java</div>
-                        <div class="skill-badge" role="listitem">PHP</div>
-                        <div class="skill-badge" role="listitem">Laravel</div>
-                        <div class="skill-badge" role="listitem">JavaScript</div>
-                        <div class="skill-badge" role="listitem">JSP</div>
-                        <div class="skill-badge" role="listitem">AJAX</div>
-                        <div class="skill-badge" role="listitem">Oracle</div>
-                        <div class="skill-badge" role="listitem">MySQL</div>
-                        <div class="skill-badge" role="listitem">SQL Server</div>
-                    </div>
-
-                    <h3 style="font-size: 1.25rem; color: var(--text-color); margin-bottom: 1rem; margin-top: 2rem;">💼 Enterprise Systems</h3>
-                    <div class="skills-grid" role="list">
-                        <div class="skill-badge" role="listitem">Salesforce</div>
-                        <div class="skill-badge" role="listitem">HubSpot</div>
-                        <div class="skill-badge" role="listitem">E-Touches</div>
-                        <div class="skill-badge" role="listitem">Sage ERP</div>
-                        <div class="skill-badge" role="listitem">Sage CRM</div>
-                        <div class="skill-badge" role="listitem">HRMS Systems</div>
-                        <div class="skill-badge" role="listitem">Microsoft 365 E5</div>
-                        <div class="skill-badge" role="listitem">Exchange</div>
-                    </div>
-
-                    <h3 style="font-size: 1.25rem; color: var(--text-color); margin-bottom: 1rem; margin-top: 2rem;">☁️ Cloud & Virtualization</h3>
-                    <div class="skills-grid" role="list">
-                        <div class="skill-badge" role="listitem">AWS (EC2, S3, RDS, IAM)</div>
-                        <div class="skill-badge" role="listitem">VMware</div>
-                        <div class="skill-badge" role="listitem">Hyper-V</div>
-                    </div>
-
-                    <h3 style="font-size: 1.25rem; color: var(--text-color); margin-bottom: 1rem; margin-top: 2rem;">🌐 Infrastructure & Networking</h3>
-                    <div class="skills-grid" role="list">
-                        <div class="skill-badge" role="listitem">Cisco Routing & Switching</div>
-                        <div class="skill-badge" role="listitem">Cisco Meraki</div>
-                        <div class="skill-badge" role="listitem">Firewalls (Cisco, Fortinet, WatchGuard)</div>
-                        <div class="skill-badge" role="listitem">Windows Server</div>
-                        <div class="skill-badge" role="listitem">Active Directory</div>
-                        <div class="skill-badge" role="listitem">Group Policy</div>
-                        <div class="skill-badge" role="listitem">Storage & Backup</div>
-                        <div class="skill-badge" role="listitem">Disaster Recovery</div>
-                    </div>
-
-                    <h3 style="font-size: 1.25rem; color: var(--text-color); margin-bottom: 1rem; margin-top: 2rem;">📊 Project & Management Tools</h3>
-                    <div class="skills-grid" role="list">
-                        <div class="skill-badge" role="listitem">ManageEngine ServiceDesk Plus</div>
-                        <div class="skill-badge" role="listitem">Jira</div>
-                        <div class="skill-badge" role="listitem">Trello</div>
-                        <div class="skill-badge" role="listitem">Microsoft Project</div>
-                        <div class="skill-badge" role="listitem">Loop</div>
-                    </div>
-
-                    <h3 style="font-size: 1.25rem; color: var(--text-color); margin-bottom: 1rem; margin-top: 2rem;">🌍 Web & Digital Platforms</h3>
-                    <div class="skills-grid" role="list">
-                        <div class="skill-badge" role="listitem">Hosting & Domain Management</div>
-                        <div class="skill-badge" role="listitem">SEO</div>
-                        <div class="skill-badge" role="listitem">WordPress</div>
-                        <div class="skill-badge" role="listitem">Shopify</div>
-                        <div class="skill-badge" role="listitem">Digital Marketing</div>
-                        <div class="skill-badge" role="listitem">HTML5</div>
-                        <div class="skill-badge" role="listitem">CSS3</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section class="projects" id="experience" aria-labelledby="experience-title">
-            <div class="section-container">
-                <h2 class="section-title" id="experience-title">Experience</h2>
-                
-                <!-- Employment History -->
-                <div style="margin-bottom: 3rem;">
-                    <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 2rem; text-align: center;">Employment History</h3>
-                    
-                    <!-- INDEX Holding -->
-                    <div style="background-color: var(--bg-color); padding: 2rem; border-radius: 0.5rem; margin-bottom: 2rem; box-shadow: var(--shadow-lg);">
-                        <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">IT Manager, INDEX Holding, Dubai</h3>
-                        <p style="color: var(--text-light); margin-bottom: 1rem;">May 2007 — November 2025 (18 years 6 months)</p>
-                        <p style="font-style: italic; color: var(--accent-color); margin-bottom: 1rem;">Promoted: Software Developer → IT Supervisor → IT Manager</p>
-                        
-                        <div style="margin-top: 1.5rem;">
-                            <p style="margin-bottom: 1rem;"><strong>Key Responsibilities:</strong></p>
-                            <ul style="list-style: none; padding-left: 0;">
-                                <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
-                                    <span style="position: absolute; left: 0;">•</span> Provide strategic leadership for IT operations across INDEX Holding and its subsidiaries, aligning digital initiatives with business objectives across industries including healthcare, exhibitions, media, tailoring, retail, F&B, and government services.
-                                </li>
-                                <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
-                                    <span style="position: absolute; left: 0;">•</span> Led the design, development, and implementation of multiple enterprise applications, including event management systems, mobile applications, a centralized loyalty system, e-commerce solutions, and custom web applications.
-                                </li>
-                                <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
-                                    <span style="position: absolute; left: 0;">•</span> Oversaw successful deployments of enterprise systems such as Salesforce, HubSpot, E-Touches, HRMS, Sage ERP, and Microsoft 365 E5.
-                                </li>
-                                <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
-                                    <span style="position: absolute; left: 0;">•</span> Led migration from Cisco telephony to Microsoft Teams Direct Routing, streamlining unified communications and reducing infrastructure costs.
-                                </li>
-                                <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
-                                    <span style="position: absolute; left: 0;">•</span> Implemented Cisco Meraki-based network across headquarters and 25 branch offices, creating a unified, centrally managed network with enhanced security and visibility.
-                                </li>
-                                <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
-                                    <span style="position: absolute; left: 0;">•</span> Managed IT infrastructure for 350+ international exhibitions and conferences, ensuring seamless and secure operations.
-                                </li>
-                                <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
-                                    <span style="position: absolute; left: 0;">•</span> Built and mentored a high-performing IT team, cultivating innovation, ownership, and continuous professional development.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Digital Track -->
-                    <div style="background-color: var(--bg-color); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--shadow-lg);">
-                        <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Software Engineer, Digital Track, Sialkot</h3>
-                        <p style="color: var(--text-light); margin-bottom: 1rem;">February 2005 — March 2007 (2 years 2 months)</p>
-                        
-                        <div style="margin-top: 1.5rem;">
-                            <p style="margin-bottom: 1rem;"><strong>Key Responsibilities:</strong></p>
-                            <ul style="list-style: none; padding-left: 0;">
-                                <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
-                                    <span style="position: absolute; left: 0;">•</span> Designed and developed custom ERP, retail, and web-based applications using Oracle 8, Developer 6i, and JSP.
-                                </li>
-                                <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
-                                    <span style="position: absolute; left: 0;">•</span> Led full-cycle development from initial concept design, requirements gathering, and system architecture to coding, testing, deployment, and post-launch support.
-                                </li>
-                                <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
-                                    <span style="position: absolute; left: 0;">•</span> Collaborated closely with business users and stakeholders to ensure each application met operational needs and scalability requirements.
-                                </li>
-                                <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
-                                    <span style="position: absolute; left: 0;">•</span> Provided ongoing system enhancements, troubleshooting, and user training to maintain performance and support business continuity.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Key Achievements -->
-                <div>
-                    <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 2rem; text-align: center;">Key Achievements</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-                        <div style="background-color: var(--bg-color); padding: 1.5rem; border-radius: 0.5rem; box-shadow: var(--shadow);">
-                            <h4 style="color: var(--primary-color); margin-bottom: 0.75rem;">🔄 Digital Transformation</h4>
-                            <p style="font-size: 0.95rem; color: var(--text-light);">Delivered full-scale digital transformation across INDEX Holding, integrating Salesforce, HubSpot, HRMS, ERP, and Microsoft 365 into a unified enterprise ecosystem.</p>
-                        </div>
-                        <div style="background-color: var(--bg-color); padding: 1.5rem; border-radius: 0.5rem; box-shadow: var(--shadow);">
-                            <h4 style="color: var(--primary-color); margin-bottom: 0.75rem;">📞 Unified Communications</h4>
-                            <p style="font-size: 0.95rem; color: var(--text-light);">Led migration from Cisco telephony to Microsoft Teams Direct Routing, cutting communication costs and improving cross-office collaboration.</p>
-                        </div>
-                        <div style="background-color: var(--bg-color); padding: 1.5rem; border-radius: 0.5rem; box-shadow: var(--shadow);">
-                            <h4 style="color: var(--primary-color); margin-bottom: 0.75rem;">🌐 Network Infrastructure</h4>
-                            <p style="font-size: 0.95rem; color: var(--text-light);">Implemented Cisco Meraki-based network across 25 branches, centralizing management and enhancing security and uptime.</p>
-                        </div>
-                        <div style="background-color: var(--bg-color); padding: 1.5rem; border-radius: 0.5rem; box-shadow: var(--shadow);">
-                            <h4 style="color: var(--primary-color); margin-bottom: 0.75rem;">📱 Enterprise Applications</h4>
-                            <p style="font-size: 0.95rem; color: var(--text-light);">Developed and deployed enterprise-level event management, mobile apps and loyalty systems, enabling automation and data-driven decision-making.</p>
-                        </div>
-                        <div style="background-color: var(--bg-color); padding: 1.5rem; border-radius: 0.5rem; box-shadow: var(--shadow);">
-                            <h4 style="color: var(--primary-color); margin-bottom: 0.75rem;">☁️ Cloud Adoption</h4>
-                            <p style="font-size: 0.95rem; color: var(--text-light);">Spearheaded cloud adoption via AWS, optimizing hosting, scalability, and disaster recovery capabilities.</p>
-                        </div>
-                        <div style="background-color: var(--bg-color); padding: 1.5rem; border-radius: 0.5rem; box-shadow: var(--shadow);">
-                            <h4 style="color: var(--primary-color); margin-bottom: 0.75rem;">🎤 Event Technology</h4>
-                            <p style="font-size: 0.95rem; color: var(--text-light);">Managed IT operations for 350+ international exhibitions and conferences, ensuring 100% system uptime and secure connectivity.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact" id="contact" aria-labelledby="contact-title">
-            <div class="section-container">
-                <h2 class="section-title" id="contact-title">Contact Me</h2>
-                <div class="contact-wrapper">
-                    <div class="contact-card" aria-label="Contact information">
+        <section id="contact" class="section-id">
+            <div class="wrap">
+                <h2>Contact Me</h2>
+                <div class="contact-grid">
+                    <div class="contact-box">
                         <h3>Get in touch</h3>
-                        <p class="contact-subtext">I’m available for leadership roles, consulting, and large-scale technology initiatives.</p>
-                        <div class="contact-info-list">
-                            <div class="info-item">
-                                <div class="info-icon" aria-hidden="true">📧</div>
-                                <div class="info-text"><a href="mailto:mustansarshahzad@gmail.com">mustansarshahzad@gmail.com</a></div>
-                            </div>
-                            <div class="info-item">
-                                <div class="info-icon" aria-hidden="true">📱</div>
-                                <div class="info-text"><a href="tel:+971501603904">+971 50 160 3904</a></div>
-                            </div>
-                            <div class="info-item">
-                                <div class="info-icon" aria-hidden="true">📍</div>
-                                <div class="info-text">Dubai, United Arab Emirates</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="info-icon" aria-hidden="true">🔗</div>
-                                <div class="info-text"><a href="https://linkedin.com/in/mustansar-cheema" target="_blank" rel="noopener">linkedin.com/in/mustansar-cheema</a></div>
-                            </div>
-                            <div class="info-item">
-                                <div class="info-icon" aria-hidden="true">🌐</div>
-                                <div class="info-text"><a href="https://mscheema.com" target="_blank" rel="noopener">mscheema.com</a></div>
-                            </div>
-                        </div>
+                        <p class="contact-box-intro">I'm available for leadership roles, consulting, and large-scale technology initiatives.</p>
+                        <ul class="contact-list">
+                            <li>
+                                <span class="contact-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+                                <a href="mailto:mustansarshahzad@gmail.com">mustansarshahzad@gmail.com</a>
+                            </li>
+                            <li>
+                                <span class="contact-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+                                <a href="tel:+971501603904">+971 50 160 3904</a>
+                            </li>
+                            <li>
+                                <span class="contact-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                                <span>Dubai, United Arab Emirates</span>
+                            </li>
+                            <li>
+                                <span class="contact-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
+                                <a href="https://linkedin.com/in/mustansar-cheema" target="_blank" rel="noopener noreferrer">linkedin.com/in/mustansar-cheema</a>
+                            </li>
+                            <li>
+                                <span class="contact-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+                                <a href="https://mscheema.com" target="_blank" rel="noopener noreferrer">mscheema.com</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="contact-form-card" aria-label="Contact form">
+                    <div class="contact-box contact-form-wrapper">
                         <h3>Send a message</h3>
-                        <form class="contact-form" id="contactForm">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required aria-required="true">
+                        <form class="contact-form" id="contact-form" action="#" method="post" aria-label="Contact form">
+                            <div class="contact-form-row">
+                                <label for="contact-name">Name</label>
+                                <input type="text" id="contact-name" name="name" required autocomplete="name" placeholder="Your name">
                             </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required aria-required="true">
+                            <div class="contact-form-row">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" name="email" required autocomplete="email" placeholder="your@email.com">
                             </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" required aria-required="true"></textarea>
+                            <div class="contact-form-row form-row-message">
+                                <label for="contact-message">Message</label>
+                                <textarea id="contact-message" name="message" required placeholder="Your message"></textarea>
                             </div>
-                            <button type="submit" class="submit-button">Send Message</button>
+                            <div class="contact-form-row form-row-button">
+                                <span></span>
+                                <button type="submit">Send Message</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -1254,85 +1292,44 @@
         </section>
     </main>
 
-    <footer role="contentinfo">
-        <p>&copy; 2024 Mustansar Cheema. All rights reserved.</p>
+    <footer>
+        <div class="wrap">
+            <p>Mustansar Cheema · IT Manager & Digital Transformation Leader</p>
+        </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.querySelector('.nav-links');
-        const navLinksItems = document.querySelectorAll('.nav-links a');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const isExpanded = navLinks.classList.contains('active');
-            menuToggle.setAttribute('aria-expanded', isExpanded);
-        });
-
-        // Close mobile menu when clicking on a link
-        navLinksItems.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                menuToggle.setAttribute('aria-expanded', 'false');
+        (function () {
+            var toggle = document.querySelector('.nav-toggle');
+            var mobileNav = document.getElementById('nav-mobile');
+            if (!toggle || !mobileNav) return;
+            toggle.addEventListener('click', function () {
+                var open = mobileNav.classList.toggle('is-open');
+                toggle.setAttribute('aria-expanded', open);
+                toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
             });
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            mobileNav.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    mobileNav.classList.remove('is-open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                    toggle.setAttribute('aria-label', 'Open menu');
+                });
+            });
+        })();
+        (function () {
+            var form = document.getElementById('contact-form');
+            if (!form) return;
+            form.addEventListener('submit', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                var nameVal = document.getElementById('contact-name').value;
+                var emailVal = document.getElementById('contact-email').value;
+                var messageVal = document.getElementById('contact-message').value;
+                var body = 'Name: ' + nameVal + '\nEmail: ' + emailVal + '\n\n' + messageVal;
+                window.location.href = 'mailto:mustansarshahzad@gmail.com?subject=Portfolio%20contact&body=' + encodeURIComponent(body);
             });
-        });
-
-        // Contact form submission with mailto fallback
-        const contactForm = document.getElementById('contactForm');
-        
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            // Create mailto link as fallback
-            const subject = encodeURIComponent('Contact from Portfolio');
-            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-            const mailtoLink = `mailto:mustansarshahzad@gmail.com?subject=${subject}&body=${body}`;
-            
-            // In a real application, you would send this to a backend
-            // For now, open mailto as fallback
-            window.location.href = mailtoLink;
-            
-            // Reset form
-            contactForm.reset();
-            
-            // Alert user (in production, replace with better UX)
-            alert('Preparing to send email...');
-        });
-
-        // Add focus-visible styles for better keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Tab') {
-                document.body.classList.add('keyboard-nav');
-            }
-        });
-
-        document.addEventListener('mousedown', () => {
-            document.body.classList.remove('keyboard-nav');
-        });
-
-        // Typewriter animation for hero subtitle - cycles through multiple titles
-        (function() {
-            const subtitleElement = document.getElementById('animated-subtitle');
-            if (!subtitleElement) return;
-
-            // Array of titles to cycle through
-            const titles = [
+        })();
+        (function () {
+            var titles = [
                 'IT Manager',
                 'IT Projects Manager',
                 'Applications Development Manager',
@@ -1341,48 +1338,40 @@
                 'Digital Transformation Leader',
                 'IT Consultant'
             ];
+            var el = document.getElementById('typewriter-title');
+            if (!el) return;
+            var index = 0;
+            var charIndex = 0;
+            var isDeleting = false;
+            var typeSpeed = 80;
+            var deleteSpeed = 50;
+            var pauseEnd = 2000;
+            var pauseStart = 500;
+            var timeout;
 
-            let currentTitleIndex = 0;
-            let currentCharIndex = 0;
-            let isDeleting = false;
-            let typingSpeed = 100; // milliseconds per character
-            let deletingSpeed = 50; // faster when deleting
-            let pauseBetweenTitles = 2000; // pause before starting next title
-
-            function typeWriter() {
-                const currentTitle = titles[currentTitleIndex];
-                
+            function run() {
+                var current = titles[index];
                 if (isDeleting) {
-                    // Deleting characters
-                    subtitleElement.textContent = currentTitle.substring(0, currentCharIndex - 1);
-                    currentCharIndex--;
-                    typingSpeed = deletingSpeed;
+                    el.textContent = current.substring(0, charIndex - 1);
+                    charIndex--;
+                    timeout = deleteSpeed;
                 } else {
-                    // Typing characters
-                    subtitleElement.textContent = currentTitle.substring(0, currentCharIndex + 1);
-                    currentCharIndex++;
-                    typingSpeed = 50;
+                    el.textContent = current.substring(0, charIndex + 1);
+                    charIndex++;
+                    timeout = typeSpeed;
                 }
-
-                if (!isDeleting && currentCharIndex === currentTitle.length) {
-                    // Finished typing, wait then start deleting
-                    typingSpeed = pauseBetweenTitles;
+                if (!isDeleting && charIndex === current.length) {
+                    timeout = pauseEnd;
                     isDeleting = true;
-                } else if (isDeleting && currentCharIndex === 0) {
-                    // Finished deleting, move to next title
+                } else if (isDeleting && charIndex === 0) {
                     isDeleting = false;
-                    currentTitleIndex = (currentTitleIndex + 1) % titles.length;
-                    typingSpeed = 500; // pause before typing next title
+                    index = (index + 1) % titles.length;
+                    timeout = pauseStart;
                 }
-
-                setTimeout(typeWriter, typingSpeed);
+                setTimeout(run, timeout);
             }
-
-            // Start the animation after a short delay
-            setTimeout(typeWriter, 1000);
+            setTimeout(run, pauseStart);
         })();
     </script>
 </body>
 </html>
-
-
